@@ -57,7 +57,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">My Laravel App</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -162,10 +162,9 @@
                         <form action="{{ route('question.store') }}" method="POST">
                             @csrf
                            <div class="mb-3">
-    <label for="nama" class="form-label">Nama</label>
-    <input type="text" id="nama" name="nama" class="form-control" required>
-</div>
-
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" id="nama" name="nama" class="form-control" required>
+                            </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" id="email" name="email" class="form-control" required>
@@ -260,4 +259,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
-</html>
