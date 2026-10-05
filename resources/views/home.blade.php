@@ -82,14 +82,14 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-           <h1>{{ $username }}</h1>
+            <h1>{{ $username }}</h1>
             <p>{{ $last_login }}</p>
             <p class="lead mb-0">A simple and elegant app using Bootstrap 5 and Laravel Blade.</p>
         </div>
     </section>
 
     <!-- Content Section -->
-    <section id="content" class="container ">
+    <section id="content" class="container">
         <div class="row">
             <div class="col-md-6">
                 {{-- About --}}
@@ -147,15 +147,42 @@
                             <strong>Div umum</strong> — ini hanya <em>container</em> untuk konten bebas.
                         </div>
                         <p class="text-muted small mt-3 mb-0">
-                            Gunakan <code>.card</code> untuk konten yang butuh border & sedikit efek shadow.
+                            Gunakan <code>.card</code> untuk konten yang butuh border &amp; sedikit efek shadow.
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6">
+                {{-- Form Pertanyaan --}}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Form Pertanyaan</h5>
+
+                        <form action="{{ route('question.store') }}" method="POST">
+                            @csrf
+                           <div class="mb-3">
+    <label for="nama" class="form-label">Nama</label>
+    <input type="text" id="nama" name="nama" class="form-control" required>
+</div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="pertanyaan" class="form-label">Pertanyaan</label>
+                                <textarea id="pertanyaan" name="pertanyaan" class="form-control" rows="4" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
+                        </form>
+                    </div>
+                </div>
+
                 {{-- Alerts --}}
-                <div class="card ">
+                <div class="card">
                     <div class="card-body">
                         <h3 class="h5 mb-3">Alerts</h3>
                         <div class="alert alert-primary mb-2">Informational alert</div>
@@ -225,7 +252,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; {{date('Y')}} My Laravel App. All Rights Reserved.</p>
+            <p>&copy; {{ date('Y') }} My Laravel App. All Rights Reserved.</p>
         </div>
     </footer>
 

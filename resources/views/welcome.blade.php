@@ -55,7 +55,7 @@
                 <h1 class="mb-1 font-medium">Let's get started</h1>
 
             <!-- Contoh penggunaan route pada tag href -->
-                        <a href="{{ route('matakuliah.show') }}">Klik Disini</a>
+                        {{-- <a href="{{ route('matakuliah.show') }}">Klik Disini</a> --}}
 
 ...
                     <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">With so many options available to you,<br /> we suggest you start with the following:</p>
