@@ -11,7 +11,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
+
+    $data = [
+        'username'        => 'Gita',
+      'last_login' => date('Y-m-d H:i:s'),
+        'list_pendidikan' => ['SD 93', 'SMP 6', 'SMA 13']
+    ];
+
+    return view('home', $data);
+
     }
 
     /**
