@@ -46,3 +46,13 @@ Route::get('/home', [HomeController::class, 'index']);
 // Route POST untuk memproses submit form
 Route::post('/question/store', [QuestionController::class, 'store'])
         ->name('question.store');
+
+  Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+  Route::get('/home-question-respon', function () {
+    return view('home-question-respon');
+})->name('home-question-respon');
+
+use App\Http\Controllers\DashboardController;
+
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
