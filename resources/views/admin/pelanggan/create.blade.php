@@ -303,13 +303,15 @@
                                     <!-- First Name -->
                                     <div class="mb-3">
                                         <label for="first_name" class="form-label">First name</label>
-                                        <input type="text" id="first_name" class="form-control" name="first_name" required>
+                                       <input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}">
+                                        @error('first_name') <div class="invalid-feedback">{{ $message }}</div> @enderror
                                     </div>
 
                                     <!-- Last Name -->
                                     <div class="mb-3">
                                         <label for="last_name" class="form-label">Last name</label>
-                                        <input type="text" id="last_name" class="form-control" name="last_name" required>
+                                       <input type="date" name="birthday" class="form-control @error('birthday') is-invalid @enderror" value="{{ old('birthday') }}">
+@error('birthday') <div class="invalid-feedback">{{ $message }}</div> @enderror
                                     </div>
                                 </div>
 
@@ -323,12 +325,12 @@
                                     <!-- Gender -->
                                     <div class="mb-3">
                                         <label for="gender" class="form-label">Gender</label>
-                                        <select id="gender" name="gender" class="form-select" name="gender">
-                                            <option value="">-- Pilih --</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                            <option value="Other">Other</option>
-                                        </select>
+                                       <select name="gender" class="form-select @error('gender') is-invalid @enderror">
+    <option value="">-- Pilih --</option>
+    <option value="Male" {{ old('gender') == 'Male' ? 'selected' : '' }}>Male</option>
+    <option value="Female" {{ old('gender') == 'Female' ? 'selected' : '' }}>Female</option>
+</select>
+@error('gender') <div class="invalid-feedback">{{ $message }}</div> @enderror
                                     </div>
                                 </div>
 
@@ -336,14 +338,15 @@
                                     <!-- Email -->
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="text" id="email" class="form-control" name="email" required>
+                                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}">
+@error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
                                     </div>
 
                                     <!-- Phone -->
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Phone</label>
-                                        <input type="text" id="phone" class="form-control" name="phone">
-                                    </div>
+                                       <input type="text" name="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}">
+                                        @error('phone') <div class="invalid-feedback">{{ $message }}</div> @enderror
 
                                     <!-- Buttons -->
                                     <div class="">
