@@ -11,7 +11,7 @@ class MatakuliahController extends Controller
      */
     public function index()
     {
-        return "menampilkan data mata kuliah ";
+        return 'menampilkan data mata kuliah ';
     }
 
     /**
@@ -19,7 +19,7 @@ class MatakuliahController extends Controller
      */
     public function create()
     {
-       return "Menampilkan form tambah matakuliah";
+        return 'Menampilkan form tambah matakuliah';
     }
 
     /**
@@ -27,19 +27,19 @@ class MatakuliahController extends Controller
      */
     public function store(Request $request)
     {
-        return "Proses menyimpan data matakuliah";
+        return 'Proses menyimpan data matakuliah';
     }
 
     /**
      * Display the specified resource.
      */
-  public function show($kode = null)
+    public function show($kode = null)
     {
         if ($kode) {
-            return "Anda mengakses matakuliah " . $kode;
+            return 'Anda mengakses matakuliah '.$kode;
         }
 
-        return "Masukkan kode matakuliah!";
+        return 'Masukkan kode matakuliah!';
     }
 
     /**
@@ -47,7 +47,7 @@ class MatakuliahController extends Controller
      */
     public function edit(string $id)
     {
-        return "Menampilkan form edit matakuliah dengan ID: " . $id;
+        return 'Menampilkan form edit matakuliah dengan ID: '.$id;
     }
 
     /**
@@ -55,7 +55,7 @@ class MatakuliahController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        return "Proses update data matakuliah dengan ID: " . $id;
+        return 'Proses update data matakuliah dengan ID: '.$id;
     }
 
     /**
@@ -63,6 +63,6 @@ class MatakuliahController extends Controller
      */
     public function destroy(string $id)
     {
-        return "Proses hapus data matakuliah dengan ID: " . $id;
+        return 'Proses hapus data matakuliah dengan ID: '.$id;
     }
 }

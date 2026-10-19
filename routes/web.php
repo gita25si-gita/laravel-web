@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MatakuliahController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\QuestionController; // 1. TAMBAHKAN IMPORT INI
 
 Route::get('/', function () {
@@ -56,3 +57,4 @@ Route::post('/question/store', [QuestionController::class, 'store'])
 use App\Http\Controllers\DashboardController;
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::resource('pelanggan', PelangganController::class);
