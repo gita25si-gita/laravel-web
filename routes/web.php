@@ -6,7 +6,7 @@ use App\Http\Controllers\MatakuliahController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\QuestionController; // 1. TAMBAHKAN IMPORT INI
-
+use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -58,3 +58,4 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::resource('pelanggan', PelangganController::class);
+Route::resource('user', UserController::class);
